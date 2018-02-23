@@ -81,7 +81,6 @@ function updateUser (id, username, currentPassword, newPassword, conn) {
 }
 
 function updateGradProfile (updatedUser, conn) {
-  console.log(updatedUser)
   const db = conn || connection
   return db('grad_profiles')
     .where('id', updatedUser.userId)
